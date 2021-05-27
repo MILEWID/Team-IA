@@ -11,7 +11,7 @@ def formular(estados,terminar,acciones,estado1):
         propositos.append(-1)
         propositos.append(-1)
     else:
-        while accionTotal<2:
+        while accionTotal<3:
             seguir=True
             estado=estado1
             accion=accionTotal
@@ -81,11 +81,11 @@ def busqueda(propon):
 
 
 
-estados=[[9,0,1],[7,0,2],[5,1,2],[15,3,4],[13,3,5],[5,4,5],[18,6,7],[7,6,8],
-[14,7,8],[9,9,10],[19,9,11],[17,10,11],[21,12,13],[13,12,14],[14,13,14],[15,15,16],
-[22,15,17],[17,16,17],[18,18,19],[19,18,20],[23,19,20],[21,21,22],[22,21,23],[23,23,22]]
+estados=[[3,0,1],[4,0,2],[5,1,2],[3,3,6],[4,7,10],[5,8,5],[9,3,6],[13,7,4],
+[14,11,5],[9,13,12],[16,4,10],[18,11,8],[15,9,12],[13,13,9],[14,19,16],[15,20,15],
+[16,14,16],[17,17,20],[18,18,21],[17,19,14],[20,17,15],[20,22,23],[22,22,21],[23,21,23]]
 
-terminar=[21,22,23]
+terminar=[17,20,15]
 acciones=["Limpiar","Izquierda","Derecha","Apagar"]
 estadoInicial=-1
 print("INGRESE EL ESTADO INICIAL:")
