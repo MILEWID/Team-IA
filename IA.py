@@ -10,8 +10,6 @@ def formular(estados,terminar,acciones,estado1):
     #si llega a una de las Metas
     if estado in terminar:
         propositos.append("Apagar")
-        propositos.append(-1)
-        propositos.append(-1)
     else:
         while accionTotal<3:
             seguir=True
@@ -80,23 +78,17 @@ def busqueda(propon):
    
     return resultado
       
-
-
-
 estados=[[3,0,1],[4,0,2],[5,1,2],[3,3,6],[4,7,10],[5,8,5],[9,3,6],[13,7,4],
-[14,11,5],[9,13,12],[16,4,10],[18,11,8],[15,9,12],[13,13,9],[14,19,16],[15,20,15],
+[14,11,5],[9,13,12],[16,4,10],[18,11,8],[15,9,12],[13,9,9],[14,19,16],[15,20,15],
 [16,14,16],[17,17,20],[18,18,21],[17,19,14],[20,17,15],[20,22,23],[22,22,21],[23,21,23]]
 
-terminar=[17,20,15]
+terminar=[15,17,20]
 acciones=["Limpiar","Izquierda","Derecha","Apagar"]
-estadoInicial=-1
-print("INGRESE EL ESTADO INICIAL:")
-while(estadoInicial>23)or(estadoInicial<0):
-    estadoInicial=int(input())
+estadoInicial=-0
 propon=formular(estados,terminar,acciones,estadoInicial)
 print()
 print()
-print("Proposiciones*****")
+print("Proposiciones")
 print(propon)
 print("Acciones a Realizar")
 print(busqueda(propon))

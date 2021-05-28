@@ -75,14 +75,17 @@ def busqueda(propon):
       
 
 
-estados=[[16,4,4],[18,18,8],[15,9,9],[9,9,9],[9,19,16],[16,20,20],[20,14,14],[14,14,20],[20,20,21],[17,17,14],[14,17,15],[20,22,23],[23,23,21],[21,21,21]
-estados=[[4,0,1],[3,0,1],[6,2,3],[3,2,3],[4,4,5],[7,4,5],[6,6,7],[7,6,7]]
-terminar=[6,7]
+estados=[[3,0,1],[4,0,2],[5,1,2],[3,3,6],[4,7,10],[5,8,5],[9,3,6],[13,7,4],
+[14,11,5],[9,13,12],[16,4,10],[18,11,8],[15,9,12],[13,13,9],[14,19,16],[15,20,15],
+[16,14,16],[17,17,20],[18,18,21],[17,19,14],[20,17,15],[20,22,23],[22,22,21],[23,21,23]]
+
+terminar=[15,17,20]
 acciones=["Limpiar","Izquierda","Derecha","Apagar"]
-estadoInicial=1
+estadoInicial=-0
 propon=formular(estados,terminar,acciones,estadoInicial)
-print("Proposiciones*****")
+print()
+print()
+print("Proposiciones")
 print(propon)
 print("Acciones a Realizar")
 print(busqueda(propon))
-
