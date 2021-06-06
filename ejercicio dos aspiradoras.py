@@ -14,7 +14,7 @@ def formular(estados,terminar,acciones,estado1):
     if estado in terminar:
         acciones.append("Apagar")
     else:
-        while accionTotal<2:
+        while accionTotal<3:
             seguir=True
             estado=estado1
             accion=accionTotal
@@ -26,7 +26,7 @@ def formular(estados,terminar,acciones,estado1):
                    seguir=False
                    propositos.append(acciones[accion])
                    propositos.append(nestado)
-                   propositos.append(acciones[3])
+                   propositos.append(acciones[4])
                 else:
                     #para que no repita el Estado
                     if nestado in propositos:
@@ -36,9 +36,9 @@ def formular(estados,terminar,acciones,estado1):
                         propositos.append(nestado)
                         accion=0
 
-                    if accion>=3:
+                    if accion>=4:
                         seguir=False
-                        propositos.append(acciones[3])
+                        propositos.append(acciones[4])
                     else:
                         #actualiza el estado
                         nestado=estados[nestado][accion]
@@ -72,8 +72,6 @@ def busqueda(propon):
         i=i+1
    
     return resultado
-      
-
 
 estados=[[3,0,1],[4,0,2],[5,1,2],[3,3,6],[4,7,10],[5,8,5],[9,3,6],[13,7,4],
 [14,11,5],[9,13,12],[16,4,10],[18,11,8],[15,9,12],[13,13,9],[14,19,16],[15,20,15],
